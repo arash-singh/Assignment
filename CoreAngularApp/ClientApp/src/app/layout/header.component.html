@@ -1,0 +1,19 @@
+<div id="custom-navbar">
+  <div class="container">
+    <div class="row row1">
+      <div class="col-sm-2">
+        <h1 style="margin:0px;"><span><a class="" href="/"><img src="assets/images/logo.png" class="logo-img" height="40" width="40" title="Walmart" /></a></span></h1>
+      </div>
+      <div class="smallsearch col-sm-8 col-xs-11">
+        <div class="row">
+          <form #searchForm="ngForm" (ngSubmit)="Search()">
+            <input class="custom-navbar-input col-xs-11" type="text" name="keyword" placeholder="Search for Products, Brands and more" [(ngModel)]="keyword" #name="ngModel" required/>
+            <button class="custom-navbar-button col-xs-1" id="btnSearch" type="submit" [disabled]="!searchForm.form.valid">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

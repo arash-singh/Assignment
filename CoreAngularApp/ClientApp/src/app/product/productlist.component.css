@@ -1,0 +1,110 @@
+.product-tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1%;
+  margin-left: -1%;
+}
+
+.product-tile {
+  padding: 10px;
+  border: 1px solid #aab3ba;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 23%;
+  margin: 1%;
+}
+
+  .product-tile .product-image {
+    max-height: 180px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 180px;
+  }
+
+    .product-tile .product-image img {
+      width: 100%;
+      border-radius: 5px;
+      height: 180px;
+    }
+
+  .product-tile p.product-description {
+    border-bottom: 1px solid #aab3ba;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 1rem;
+    margin-bottom: 0px;
+    max-height: 35px;
+    height: 35px;
+  }
+
+  .product-tile h4.product-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    height: 29px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+    .product-tile h4.product-title a {
+      color: #343a40;
+      text-decoration: none;
+    }
+
+      .product-tile h4.product-title a:hover {
+        color: #aab3ba;
+        text-decoration: none;
+      }
+
+/*Action Alerts List View*/
+.product-tile-container.list-view {
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+  .product-tile-container.list-view .product-tile {
+    width: 100%;
+    margin: 1% 0;
+    display: inline-block
+  }
+
+    .product-tile-container.list-view .product-tile .product-image {
+      width: 20%;
+      float: left;
+      max-height: 200px;
+      height: auto;
+    }
+
+    .product-tile-container.list-view .product-tile .product-body {
+      width: 80%;
+      float: left;
+      box-sizing: border-box;
+      padding-left: 20px;
+    }
+
+      .product-tile-container.list-view .product-tile .product-body h4.product-title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        height: auto;
+        overflow: hidden;
+        white-space: initial;
+      }
+
+      .product-tile-container.list-view .product-tile .product-body p.product-description {
+        display: block;
+        border-bottom: 1px solid #aab3ba;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        min-height: 128px;
+        max-height: 175px;
+        overflow: hidden;
+        white-space: initial;
+        height: auto;
+      }
+
+        .product-tile-container.list-view .product-tile .product-body p.product-description ul {
+          display: none
+        }
