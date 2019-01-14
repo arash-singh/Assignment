@@ -26,7 +26,6 @@ export class RecommendationComponent implements OnChanges {
   private getProductRecommendations() {
     //Call API to get product recommendations
     this.productService.getProductRecommendations(this.id).subscribe(data => {
-      console.log(data);
       this.productRecommendation = data;
       //Call API to get recommended products details
     }, error => { console.log(error); }

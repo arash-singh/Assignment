@@ -10,14 +10,17 @@ export class ProductService {
   }
 
   searchItems(key:string): Observable<any> {
-    return this.http.get("/api/search?key=" + key);
+    //return this.http.get("/api/search?key=" + key);
+    return this.http.get('/search-api1.json');
   }
 
   getProductDetail(id: string): Observable<any> {
-    return this.http.get("/api/product?id=" + id);
+    //return this.http.get("/api/product?id=" + id);
+    return this.http.get('/product-lookup.json');
   }
 
   getProductRecommendations(id: string): Observable<any> {
-    return this.http.get("/api/product/GetRecommendations?id=" + id);
+    //return this.http.get("/api/product/GetRecommendations?id=" + id);
+    return this.http.get('/product-recommendations.json');
   }
 }

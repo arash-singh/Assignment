@@ -23,8 +23,7 @@ export class ProductDetailComponent {
   private getProductDetails() {
     //Call API to get product details
     this.productService.getProductDetail(this.productId).subscribe(data => {
-      console.log(data);
-      this.productDetails = data;      
+      this.productDetails = data.items[0];      
     }, error => { console.log(error); }
     );
   }

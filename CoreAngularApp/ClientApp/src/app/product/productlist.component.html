@@ -17,14 +17,14 @@
       <p>No search results found your search keyword.</p>
     </div>
     <div *ngIf="productList" class="product-tile-container" [ngClass]="{'list-view':viewMode =='list'}">
-      <div class="product-tile">
+      <div class="product-tile" *ngFor="let product of productList">
         <div class="product-image">
-          <img ng-show="" src="../../assets/img/default-alert-image.png" class="img-fluid" alt="default image">
-        </div>
+          <a [routerLink]="['/product', product.itemId]" role="button"><img src="{{product.thumbnailImage}}" class="img-fluid" alt="{{product.name}}"></a>
+</div>
         <div class="product-body">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" [routerLink]="['/product', productId]" role="button">View details &raquo;</a></p>
+          <h2><a [routerLink]="['/product', product.itemId]" role="button">{{product.name}}</a></h2>
+          <p>{{product.shortDescription}}</p>
+          <p>Price: US$ {{product.salePrice}}</p>
         </div>
       </div>
     </div>

@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./productlist.component.css']
 })
 export class ProductListComponent {
-  public productId = 123;
   public viewMode: string;
   public productList: any;
   private keyword: string;
@@ -24,11 +23,9 @@ export class ProductListComponent {
   }
 
   private getSearchData() {
-    this.productList = ' ';
     //Call API to Get Search Results
     this.productService.searchItems(this.keyword).subscribe(data => {
-      console.log(data);
-      this.productList = data;
+      this.productList = data.items;
       //Call API to get search result details
     }, error => { console.log(error); }
     );
